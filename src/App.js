@@ -1,6 +1,6 @@
 import './App.scss';
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/Home/Home';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 import PageNotFound from './components/PageNotFound/PageNotFound';
@@ -10,13 +10,15 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Header></Header>
-        <Route path="/" element={<Home />} />
-        <Route path="/movie/:imdbID" element={<MovieDetails />} />
-        <Route element={<PageNotFound />} />
-        <Footer />
-      </Routes>
+      <Header></Header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie/:imdbID" element={<MovieDetails />} />
+          <Route element={<PageNotFound />} />
+        </Routes>
+      </Router>
+      <Footer />
     </div>
   );
 }
