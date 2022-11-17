@@ -10,8 +10,10 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+      
       <Router>
+        <>
+        <Header></Header></>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movie/:imdbID" element={<MovieDetails />} />
