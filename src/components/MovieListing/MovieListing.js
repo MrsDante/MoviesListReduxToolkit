@@ -22,7 +22,7 @@ const MovieListing = () => {
       shows.Search.map((show, index) => {
         return <MovieCard key={index} data={show} />
       })
-    ) : (<div className="movies-error"><h3>{shows.Error}</h3></div>);
+    ) : (<div className="shows-error"><h3>{shows.Error}</h3></div>);
     
     console.log(shows.Response)
     //console.log(movies.Search.map(el => ))
