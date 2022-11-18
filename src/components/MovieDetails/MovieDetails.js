@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAsyncMovieOrShowDetail } from '../../features/movies/movieSlice';
 import { getSelectedMovieOrShow } from '../../features/movies/movieSlice';
 
+import './MovieDetails.scss';
+
 const MovieDetails = () => {
    const { imdbID } = useParams();
    console.log(imdbID)
@@ -54,6 +56,9 @@ const MovieDetails = () => {
           <span>Awards</span>
           <span>{data.Awards}</span>
         </div>
+      </div>
+      <div className="section-right">
+         <img src={data.Poster} alt={data.Title} />
       </div>
     </div>
   )
