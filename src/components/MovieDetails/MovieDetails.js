@@ -18,8 +18,41 @@ const MovieDetails = () => {
   return (
     <div className="movie-section">
       <div className="section-left">
-        <div className="movie-title">
-          {data.Title}
+        <div className="movie-title">{data.Title}</div>
+        <div className="movie-rating">
+          <span>
+            IMDB Rating <i className="fa fa-star"></i> : {data.imdbRating}
+          </span>
+          <span>
+            IMDB Votes <i className="fa fa-thimbs-up"></i> : {data.imdbRating}
+          </span>
+          <span>
+            Runtime <i className="fa fa-film"></i> : {data.Runtime}
+          </span>
+          <span>
+            Year <i className="fa fa-calendar"></i> : {data.Year}
+          </span>
+        </div>
+        <div className="movie-plot">{data.Plot}</div>
+        <div className="movie-info">
+          <span>Director</span>
+          <span>{data.Director}</span>
+        </div>
+        <div className="movie-info">
+          <span>Stars</span>
+          <span>{data.Actors}</span>
+        </div>
+        <div className="movie-info">
+          <span>Generes</span>
+          <span>{data.Genre}</span>
+        </div>
+        <div className="movie-info">
+          <span>Languages</span>
+          <span>{data.Language}</span>
+        </div>
+        <div className="movie-info">
+          <span>Awards</span>
+          <span>{data.Awards}</span>
         </div>
       </div>
     </div>
