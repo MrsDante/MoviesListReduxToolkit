@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import user from '../../images/cat.png';
+import './Header.scss';
 
 const Header = () => {
   return (
