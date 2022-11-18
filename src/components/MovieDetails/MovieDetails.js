@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAsyncMovieOrShowDetail } from '../../features/movies/movieSlice';
 import { getSelectedMovieOrShow } from '../../features/movies/movieSlice';
+import { removeSelectedMovieOtShow } from '../../features/movies/movieSlice';
 
 import './MovieDetails.scss';
 
@@ -14,7 +15,10 @@ const MovieDetails = () => {
    console.log(data)
 
    useEffect(() => {
-     dispatch(fetchAsyncMovieOrShowDetail(imdbID))
+     dispatch(fetchAsyncMovieOrShowDetail(imdbID));
+     return () => {
+       dispatch(removeSelectedMovieOtShow());
+     }
    }, [dispatch, imdbID]);
 
   return (
