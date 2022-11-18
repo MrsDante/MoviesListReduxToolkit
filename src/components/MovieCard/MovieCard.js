@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './MovieCard.scss';
 
 const MovieCard = ({ data }) => {
   console.log(data)
+  console.log(data.imdbID)
   return (
     <div className="card-item">
+      <Link to={`/movie/${data.imdbID}`}>
       <div className="catd-inner">
         <div className="card-top">
           <img src={ data.Poster } alt="MOVIE POSTERRRRRRRR" />
@@ -16,6 +19,7 @@ const MovieCard = ({ data }) => {
           </div>
         </div>
       </div>
+      </Link>
     </div>
   )
 }
