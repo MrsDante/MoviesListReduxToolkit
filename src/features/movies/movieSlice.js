@@ -5,17 +5,17 @@ import { APIKey } from '../../common/APIs/movieAPIKey';
 //import { useDispatch } from 'react-redux';
 //import { addMovies } from '../../features/movies/movieSlice';
 
-export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async () => {
-    const movieText = 'Harry';
+export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async (term) => {
+   // const movieText = 'Harry';
     const response = await movieApi
-    .get(`?apiKey=${APIKey}&s=${movieText}&type=movie`)
+    .get(`?apiKey=${APIKey}&s=${term}&type=movie`)
     return response.data;
 });
 
-export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async () => {
-    const seriesText = 'True';
+export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async (term) => {
+   // const seriesText = 'True';
     const response = await movieApi
-    .get(`?apiKey=${APIKey}&s=${seriesText}&type=series`)
+    .get(`?apiKey=${APIKey}&s=${term}&type=series`)
     return response.data;
 });
 
