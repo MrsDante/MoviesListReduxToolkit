@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAsyncMovieOrShowDetail } from '../../features/movies/movieSlice';
 import { getSelectedMovieOrShow } from '../../features/movies/movieSlice';
@@ -9,10 +9,11 @@ import './MovieDetails.scss';
 
 const MovieDetails = () => {
    const { imdbID } = useParams();
-   console.log(imdbID)
+   //console.log(imdbID)
    const dispatch = useDispatch();
    const data = useSelector(getSelectedMovieOrShow);
-   console.log(data)
+   //console.log(data)
+   const navigate = useNavigate();
 
    useEffect(() => {
      dispatch(fetchAsyncMovieOrShowDetail(imdbID));
@@ -23,6 +24,7 @@ const MovieDetails = () => {
 
   return (
     <div className="movie-section">
+      <button onClick={() => navigate(-1)} className="btn">Назад</button>
       {Object.keys(data).length === 0 ?
       (<div>...Loading</div>) :
       (<>
