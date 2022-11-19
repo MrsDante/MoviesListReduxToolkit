@@ -13,6 +13,8 @@ const Header = () => {
     e.preventDefault();
     dispatch(fetchAsyncMovies(term));
     dispatch(fetchAsyncShows(term));
+
+    setTerm('');
    // console.log(term);
   }
 
