@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import React from "react";
 import movieApi from '../../common/APIs/movieAPI';
 import { APIKey } from '../../common/APIs/movieAPIKey';
 //import { useDispatch } from 'react-redux';

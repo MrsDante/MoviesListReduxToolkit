@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import MovieListing from '../MovieListing/MovieListing';
-import movieApi from '../../common/APIs/movieAPI';
+//import movieApi from '../../common/APIs/movieAPI';
 //import { APIKey } from '../../common/APIs/MovieAPIKey';
-import { APIKey } from '../../common/APIs/movieAPIKey';
+//import { APIKey } from '../../common/APIs/movieAPIKey';
 import { useDispatch } from 'react-redux';
-import { addMovies, fetchAsyncShows } from '../../features/movies/movieSlice';
+import { fetchAsyncShows } from '../../features/movies/movieSlice';
 import { fetchAsyncMovies } from '../../features/movies/movieSlice';
 
 const Home = () => {

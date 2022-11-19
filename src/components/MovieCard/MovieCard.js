@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './MovieCard.scss';
 
 const MovieCard = ({ data }) => {
   //console.log(data)
   //console.log(data.imdbID)
-  const navigate = useNavigate();
   return (
     <div className="card-item">
       <Link to={`/movie/${data.imdbID}`}>
