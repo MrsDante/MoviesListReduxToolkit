@@ -1,11 +1,12 @@
 import './App.scss';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Loading from './components/Loading/Loading';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <>
         <Header></Header></>
+        <Suspense fallback={<Loading />} >
         <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,6 +23,7 @@ function App() {
           <Route element={<PageNotFound />} />
         </Routes>
         </div>
+        </Suspense>
       </Router>
       <Footer />
     </div>
