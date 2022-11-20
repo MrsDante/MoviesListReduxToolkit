@@ -1,3 +1,11 @@
+# Описание
+
+Приложение по поиску фильмов и сериалов по ключевым словам. При клике на фильм/сериал загружается отдельная страница с подробным описанием, на которой есть кнопка 'Назад', позволяющая вернуться к списку всех найденных фильмов
+
+# Использованные технологии
+
+React Redux, Toolkit, Router v6.0, scss
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
